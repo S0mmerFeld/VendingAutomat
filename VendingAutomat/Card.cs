@@ -13,7 +13,7 @@ namespace VendingAutomat
         private float _discount;
         public float Discount
         {
-            get { return _discount / 100; }
+            get { return _discount; }
             set
             {
                 if (value < 0 || value > 50)

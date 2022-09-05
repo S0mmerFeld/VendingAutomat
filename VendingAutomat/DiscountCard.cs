@@ -12,17 +12,16 @@ namespace VendingAutomat
         {
 
         }
-        public DiscountCard(int id, int discount, decimal purchase = 0)
+        public DiscountCard(int id, float discount, decimal purchase = 0)
         {
             Id = id;
             Discount = discount;
+            PurchaseSum = purchase;
         }
 
         public DiscountCard(Card card, decimal purchase = 0)
+            :this(card.Id, card.Discount, purchase)
         {
-            Id = card.Id;
-            Discount = card.Discount;
-            PurchaseSum = purchase;
         }
 
         public decimal PurchaseSum { get; set; }
