@@ -13,5 +13,10 @@ namespace VendingAutomat
         public string Description { get; set; }
         public string ShortDescription { get; set; }
 
+        public override string ToString()
+        {
+            return $"Goods Id = {Id} \n" + $" Name: {Name} \n" + $"Description: {Description} \n" + $"ShortDesctiption {ShortDescription}";  
+        }
+
     }
 }

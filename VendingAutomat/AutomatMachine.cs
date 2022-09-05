@@ -16,5 +16,17 @@ namespace VendingAutomat
         public int CurrentProductNumber { get; set; }
         public List<Sold> Solds { get; set; }
 
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendFormat("AutomatMachineId:{0}\n InventoryNum:{1}\n Name:{2}\n Address:{3}\n MaxProductCapacity:{4}\n CurrentProductNumber:{5}\n ",
+                                            Id, InventoryNum, Name, Address, MaxProductCapacity, CurrentProductNumber);
+            foreach (Sold s in Solds)
+            {
+                sb.AppendFormat(s.ToString(), s);
+            }
+            return sb.ToString();
+        }
+
     }
 }

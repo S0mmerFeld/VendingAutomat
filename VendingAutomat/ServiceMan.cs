@@ -12,5 +12,12 @@ namespace VendingAutomat
         public string Name { get; set; }
         public string Surname { get; set; }
         public ServiceCard SMCard { get; set; }
+
+
+
+        public override string ToString()
+        {
+            return $"ServiceManId {Id}\n" + $"Name {Name}\n" + $"Surname {Surname}\n" + $"SMCard {SMCard.ToString()}\n";
+        }
     }
 }

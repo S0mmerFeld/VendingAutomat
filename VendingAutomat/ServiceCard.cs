@@ -17,5 +17,17 @@ namespace VendingAutomat
             Id = id;
             Discount = discount;
         }
+
+        public ServiceCard(Card card)
+        {
+            Id = card.Id;
+            Discount = card.Discount;
+        }
+
+
+        public override string ToString()
+        {
+            return $"ServiceCardId {this.Id}\n" + $"Discount {this.Discount}\n";
+        }
     }
 }

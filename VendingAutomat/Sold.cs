@@ -14,5 +14,10 @@ namespace VendingAutomat
         public DateTime SellsDateTime { get; set; }
         public List<ProductSale> ProductSales { get; set; }
         public int? AutomatMachineId { get; set; }
+
+        public override string ToString()
+        {
+            return $"SoldId {Id}\n" + $"Price {Price}\n" + $"Tax {Tax}\n" + $"SellsDateTime {SellsDateTime.ToString()}\n ";
+        }
     }
 }
