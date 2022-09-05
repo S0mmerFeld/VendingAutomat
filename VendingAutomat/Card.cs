@@ -16,9 +16,9 @@ namespace VendingAutomat
             get { return _discount; }
             set
             {
-                if (value < 0 || value > 50)
+                if (value < 0 || value > 30)
                     throw new ArgumentOutOfRangeException(nameof(value),
-                          "The valid range is between 0 and 50.");
+                          "The valid range is between 0 and 30.");
 
                 _discount = value;
             }
